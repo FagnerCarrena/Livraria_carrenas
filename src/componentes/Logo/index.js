@@ -1,4 +1,4 @@
-import logo from '../../imagens/logo.svg'
+import logo from '../../imagens/dog.png'
 import styled from 'styled-components'
 
 
@@ -10,6 +10,7 @@ display: flex;
 
 const LogoImage = styled.img `
 margin-right: 10px;
+width: 70px;
 `
 
 function Logo() {
@@ -18,7 +19,6 @@ return (
         <LogoImage
         src={logo} 
         alt="logo da empresa"
-       className='logo-img'
        />
         <p>Livraria <strong>Carrenas</strong></p>
 </LogoContainer>
