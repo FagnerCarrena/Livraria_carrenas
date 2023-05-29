@@ -15,7 +15,6 @@ const AppContainer = styled.div`
 function Home() {
   return (
     <AppContainer>
-     
       <Pesquisa/>
       <UltimosLancamentos/>
      </AppContainer>

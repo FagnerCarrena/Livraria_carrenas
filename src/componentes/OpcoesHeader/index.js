@@ -23,7 +23,7 @@ function OpcoesHeader(){
 return(
     <Opcoes>
           {textoOpcoes.map((item)=>(
-            <Link to={`/${item.toLowerCase()}`}><Opcao><p>{item}</p></Opcao></Link> 
+            <Link to={`/${item.toLowerCase()}`}><Opcao key={item.id}><p>{item}</p></Opcao></Link> 
           ))}
         </Opcoes>
 )

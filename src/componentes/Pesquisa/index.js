@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Input from '../Input';
 import styled from 'styled-components';
-import {livros} from './dadosPesquisa';
+import { getLivros } from '../../servicos/livros';
+//import {livros} from './dadosPesquisa';
 
 
 
@@ -49,6 +50,17 @@ const Resultado = styled.div`
 
  function Pesquisa(){
 const [livrosPesquisados, setLivrosPesquisados]= useState([])
+const [livros, setLivros] = useState([])
+
+useEffect(()=>{
+   fetchLivros()
+}, [])
+
+async function fetchLivros(){
+    const livrosApi = await getLivros()
+    setLivros(livrosApi)
+
+}
 
     return(
         <PesquisaContainer>
