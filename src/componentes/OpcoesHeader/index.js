@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Opcoes = styled.ul`
@@ -22,7 +23,7 @@ function OpcoesHeader(){
 return(
     <Opcoes>
           {textoOpcoes.map((item)=>(
-             <Opcao><p>{item}</p></Opcao>
+            <Link to={`/${item.toLowerCase()}`}><Opcao><p>{item}</p></Opcao></Link> 
           ))}
         </Opcoes>
 )
